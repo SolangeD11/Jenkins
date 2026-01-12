@@ -5,11 +5,11 @@ const app = require('../index'); // Necesitamos exportar 'app' desde index.js
 describe('API de usuarios', () => {
 const testUser = { id: 'test123', name: 'Test User', email: 'test@example.com' };
 
-afterA11(() => {
+afterAll(() => {
 // Limpieza: eliminar usuario de prueba si existe
 const users = JSON.parse(fs.readFileSync('./users.json', 'utf8'));
 const filtered = users.filter(u => u.id !== testUser.id);
-fs.writeFilesync('./users.json', JSON.stringify(filtered, null, 2), 'utf8');
+fs.writeFileSync('./users.json', JSON.stringify(filtered, null, 2), 'utf8');
 });
 
 it('Debe responder el endpoint raiz', async () => {
@@ -19,7 +19,7 @@ expect(res.body.message).toMatch(/Servidor en ejecucion/i);
 });
 
 it('Debe crear un nuevo usuario', async () => {
-expect (res.statusCode). toBe(201);
+expect(res.statusCode). toBe(201);
 const res = await request(app).post('/users').send(testUser);
 expect(res.body.user).toMatch0bject(testUser);
 });
