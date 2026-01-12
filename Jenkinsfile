@@ -17,7 +17,6 @@ pipeline {
             steps {
                 // Agrega esta línea para dar permisos de ejecución:
                 sh 'chmod +x -R node_modules/.bin/' 
-                
                 sh 'npm test'
             }
         }
@@ -45,4 +44,3 @@ pipeline {
         }
     }
 }
- 
