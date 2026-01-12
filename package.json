@@ -4,9 +4,28 @@
     "description": "Mi aplicación Node.js",
     "main": "index.js",
     "scripts": {
-      "start": "node index.js"
+        "test": "jest"
+    },
+    "jest": {
+        "testEnvironment": "node"
     },
     "dependencies": {
-      "express": "^4.18.2"
-    }
-  }
+        "express": "^4.22.1",
+        "jest": "^30.2.0",
+        "supertest": "^7.2.2"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SolangeD11/Jenkins.git"
+    },
+    "bugs": {
+        "url": "https://github.com/SolangeD11/Jenkins/issues"
+    },
+    "homepage": "https://github.com/SolangeD11/Jenkins#readme"
+}
